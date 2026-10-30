@@ -1,0 +1,938 @@
+@import "./dashboard.css?v=3";
+
+body[data-insight-page="poverty_rate"] {
+  --insight-accent: #8a2430;
+  --insight-accent-soft: rgba(138, 36, 48, 0.14);
+  --insight-ink: #4f131d;
+}
+
+body[data-insight-page="unemployment_rate"] {
+  --insight-accent: #2e5f74;
+  --insight-accent-soft: rgba(46, 95, 116, 0.14);
+  --insight-ink: #18343f;
+}
+
+body[data-insight-page="disability_rate"] {
+  --insight-accent: #6f5a2e;
+  --insight-accent-soft: rgba(111, 90, 46, 0.15);
+  --insight-ink: #433720;
+}
+
+.brand-mark {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--brand-slate);
+}
+
+.brand-mark:hover,
+.brand-mark:focus-visible {
+  text-decoration: underline;
+}
+
+.insight-shell {
+  padding-bottom: 88px;
+}
+
+.insight-hero {
+  position: relative;
+  margin-top: 18px;
+  padding: clamp(22px, 4vw, 42px);
+  border-radius: 34px;
+  overflow: hidden;
+  border: 1px solid rgba(40, 66, 78, 0.12);
+  box-shadow: var(--shadow-soft);
+  background:
+    radial-gradient(circle at 14% 18%, var(--insight-accent-soft), transparent 26%),
+    radial-gradient(circle at 86% 16%, rgba(255, 255, 255, 0.56), transparent 24%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(248, 243, 234, 0.97));
+}
+
+.insight-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -120px -120px auto;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--insight-accent-soft), transparent 70%);
+  pointer-events: none;
+}
+
+.insight-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(320px, 0.82fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.insight-hero-copy {
+  min-width: 0;
+  max-width: 60ch;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 16px;
+  color: var(--brand-slate);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  text-decoration: underline;
+}
+
+.insight-cover-panel {
+  position: relative;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  min-width: 0;
+  min-height: 320px;
+  padding: 26px;
+  border-radius: 26px;
+  border: 1px solid rgba(40, 66, 78, 0.08);
+  overflow: hidden;
+  background: #1e282b;
+  color: #fffdf8;
+  box-shadow: var(--shadow-lift);
+}
+
+.insight-cover-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  pointer-events: none;
+}
+
+body[data-insight-page="poverty_rate"] .insight-cover-panel::before {
+  background-image:
+    linear-gradient(90deg, rgba(18, 23, 22, 0.78), rgba(18, 23, 22, 0.48)),
+    url("../images/insight-poverty-cover.png");
+}
+
+body[data-insight-page="unemployment_rate"] .insight-cover-panel::before {
+  background-image:
+    linear-gradient(90deg, rgba(18, 23, 22, 0.82), rgba(18, 23, 22, 0.42)),
+    url("../images/insight-unemployment-cover.png");
+}
+
+body[data-insight-page="disability_rate"] .insight-cover-panel::before {
+  background-image:
+    linear-gradient(90deg, rgba(18, 23, 22, 0.78), rgba(18, 23, 22, 0.38)),
+    url("../images/insight-disability-cover.png");
+}
+
+.insight-cover-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.insight-cover-panel h2 {
+  margin: 0;
+  font-size: clamp(1.6rem, 3vw, 2.35rem);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.insight-cover-copy {
+  margin: 0;
+  color: rgba(255, 252, 246, 0.9);
+  text-align: center;
+  max-width: 38ch;
+  justify-self: center;
+}
+
+.insight-cover-panel .story-box {
+  width: min(100%, 34rem);
+}
+
+.insight-cover-figure {
+  margin-top: 20px;
+  min-height: 180px;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.insight-cover-figure img,
+.insight-closing-figure img,
+.chapter-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+
+.story-box-group {
+  display: grid;
+  gap: 12px;
+}
+
+.story-box {
+  padding: 16px 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(40, 66, 78, 0.08);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.story-box-title {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.story-box-copy {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.story-box h2,
+.story-box h3,
+.story-box h4,
+.story-box p {
+  margin: 0;
+}
+
+.story-box-title-compact h3,
+.story-box-title-compact h4 {
+  font-size: 1.05rem;
+}
+
+.insight-section-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.insight-nav-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 999px;
+  border: 1px solid rgba(40, 66, 78, 0.12);
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--brand-slate);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.insight-nav-pill:hover,
+.insight-nav-pill:focus-visible {
+  border-color: rgba(40, 66, 78, 0.24);
+  box-shadow: var(--shadow-soft);
+}
+
+.insight-nav-pill.is-active {
+  background: var(--insight-accent);
+  color: #fffdf8;
+  border-color: transparent;
+  box-shadow: var(--shadow-soft);
+}
+
+.section-head-compact {
+  margin-bottom: 0;
+}
+
+.insight-shell .section-head p {
+  max-width: none;
+}
+
+.statewide-context-grid,
+.insight-meta-grid,
+.insight-reference-grid,
+.chapter-overview-grid,
+.chapter-county-grid,
+.insight-bottom-grid,
+.chapter-editorial-grid,
+.insight-closing-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.statewide-context-grid {
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+}
+
+.insight-meta-grid {
+  margin-top: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.insight-reference-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.statewide-headline-card,
+.statewide-spotlight-card,
+.insight-meta-card,
+.insight-section,
+.chapter-narrative-card,
+.chapter-statewide-card,
+.insight-map-card,
+.chapter-county-card,
+.insight-evidence-card,
+.insight-ranking-card,
+.chapter-story-card,
+.chapter-visual-card,
+.insight-closing-card {
+  border: 1px solid rgba(40, 66, 78, 0.08);
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(249, 245, 238, 0.97));
+  box-shadow: var(--shadow-soft);
+}
+
+.statewide-headline-card,
+.statewide-spotlight-card,
+.insight-meta-card,
+.chapter-narrative-card,
+.chapter-statewide-card,
+.insight-map-card,
+.chapter-county-card,
+.insight-evidence-card,
+.insight-ranking-card,
+.chapter-story-card,
+.chapter-visual-card,
+.insight-closing-card {
+  padding: 20px;
+}
+
+.statewide-headline-card {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.44fr) minmax(0, 1fr);
+  align-items: start;
+  align-content: start;
+  gap: 14px;
+  background:
+    radial-gradient(circle at 12% 16%, var(--insight-accent-soft), transparent 24%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(249, 245, 238, 0.97));
+}
+
+.statewide-headline-card > .label,
+.statewide-headline-value,
+.statewide-headline-caption {
+  grid-column: 1;
+}
+
+.statewide-headline-value {
+  margin: 0;
+  font-size: clamp(2.8rem, 5vw, 4.8rem);
+  line-height: 0.92;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--insight-ink);
+}
+
+.statewide-headline-caption {
+  margin: 0;
+  color: var(--ink-700);
+}
+
+.statewide-headline-card .story-box-group {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  margin-top: 0;
+}
+
+#statewide-intro {
+  max-width: none;
+  text-wrap: pretty;
+}
+
+.statewide-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.statewide-stat-card {
+  min-width: 0;
+  padding: 12px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(40, 66, 78, 0.08);
+}
+
+.statewide-stat-card .label,
+.statewide-series-item .label,
+.series-pill,
+.insight-count-card .label,
+.insight-section-glance-card .label {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-500);
+}
+
+.statewide-stat-card strong {
+  display: block;
+  margin-top: 7px;
+  font-size: 1.14rem;
+  color: var(--ink-950);
+}
+
+.statewide-stat-card p {
+  margin: 5px 0 0;
+  color: var(--ink-700);
+  font-size: 0.9rem;
+}
+
+.statewide-series-list {
+  display: grid;
+  gap: 10px;
+  max-height: 420px;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.statewide-series-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(40, 66, 78, 0.08);
+  background: rgba(255, 255, 255, 0.86);
+}
+
+.statewide-series-item.is-selected {
+  border-color: rgba(40, 66, 78, 0.24);
+  box-shadow: inset 0 0 0 1px rgba(40, 66, 78, 0.1);
+}
+
+.statewide-series-copy {
+  min-width: 0;
+}
+
+.statewide-series-name {
+  display: block;
+  font-weight: 700;
+  color: var(--ink-950);
+}
+
+.statewide-series-meta {
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.series-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(40, 66, 78, 0.06);
+  color: var(--ink-700);
+}
+
+.statewide-series-bar {
+  position: relative;
+  height: 8px;
+  margin-top: 8px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #e7e3db;
+}
+
+.statewide-series-bar span {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--insight-accent) 48%, #f0d4ad 52%), var(--insight-accent));
+}
+
+.statewide-series-value {
+  min-width: 88px;
+  text-align: right;
+  font-weight: 800;
+  color: var(--insight-ink);
+}
+
+.story-copy,
+.insight-meta-copy,
+.insight-section-copy,
+.insight-section-note,
+.evidence-note,
+.insight-empty,
+.chapter-text,
+.insight-closing-card p:last-child {
+  color: var(--ink-700);
+}
+
+.statewide-spotlight-card .evidence-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+}
+
+.insight-meta-copy {
+  margin: 8px 0 0;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.insight-section {
+  padding: 24px;
+  scroll-margin-top: 92px;
+}
+
+.insight-section + .insight-section {
+  margin-top: 6px;
+}
+
+.insight-section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.insight-section-head h3 {
+  margin: 6px 0 0;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.insight-select-shell {
+  min-width: 260px;
+  display: grid;
+  gap: 6px;
+  color: var(--ink-700);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.insight-select-shell select {
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.insight-section-static-chip {
+  min-width: 260px;
+  padding: 12px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(40, 66, 78, 0.12);
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--ink-700);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.insight-section-glance {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.insight-section-glance-card {
+  min-width: 0;
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(40, 66, 78, 0.08);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.insight-section-glance-card strong {
+  display: block;
+  margin-top: 7px;
+  font-size: 1.12rem;
+  color: var(--ink-950);
+}
+
+.insight-section-glance-card p {
+  margin: 6px 0 0;
+  font-size: 0.9rem;
+}
+
+.chapter-overview-grid {
+  margin-top: 18px;
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+  align-items: start;
+}
+
+.chapter-narrative-card {
+  border-top: 4px solid var(--insight-accent);
+}
+
+.chapter-narrative-card h4,
+.chapter-statewide-card h4,
+.chapter-county-card h4,
+.chapter-story-card h4,
+.chapter-visual-card h4,
+.insight-closing-card h3 {
+  margin: 8px 0 0;
+  font-size: 1.15rem;
+}
+
+.chapter-text {
+  margin: 10px 0 0;
+}
+
+.chapter-statewide-selected {
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(40, 66, 78, 0.08);
+}
+
+.chapter-statewide-selected .label {
+  display: block;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-500);
+}
+
+.chapter-statewide-selected strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--insight-ink);
+}
+
+.chapter-statewide-selected p {
+  margin: 8px 0 0;
+  color: var(--ink-700);
+}
+
+.chapter-statewide-card .statewide-series-list {
+  margin-top: 14px;
+  max-height: 500px;
+}
+
+.chapter-county-grid {
+  margin-top: 16px;
+  grid-template-columns: minmax(0, 1.24fr) minmax(320px, 0.76fr);
+  align-items: start;
+}
+
+.insight-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.insight-card-head h3,
+.insight-card-head h4 {
+  margin: 0;
+}
+
+.insight-count-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.insight-count-card {
+  min-width: 0;
+  padding: 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(40, 66, 78, 0.08);
+}
+
+.insight-count-card strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 1.1rem;
+  color: var(--brand-slate);
+}
+
+.map-stage-compact {
+  min-height: 0;
+  width: 100%;
+}
+
+.map-stage-compact > svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.chapter-county-card dl,
+.insight-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.chapter-county-card dt,
+.insight-summary-grid dt {
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-500);
+}
+
+.chapter-county-card dd,
+.insight-summary-grid dd {
+  margin: 4px 0 0;
+  font-weight: 700;
+  color: var(--ink-950);
+  overflow-wrap: anywhere;
+}
+
+.insight-bottom-grid {
+  margin-top: 16px;
+  grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+  align-items: stretch;
+}
+
+.insight-evidence-card,
+.insight-ranking-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.evidence-grid {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.evidence-card {
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(40, 66, 78, 0.08);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.evidence-card h5 {
+  margin: 6px 0 0;
+  font-size: 1rem;
+}
+
+.evidence-rate {
+  margin: 8px 0 0;
+  font-size: 1.4rem;
+  line-height: 1;
+  font-weight: 800;
+  color: var(--insight-ink);
+}
+
+.ranking-cluster h5 {
+  margin: 0 0 12px;
+  font-size: 0.94rem;
+}
+
+.mini-ranking-list {
+  display: grid;
+  gap: 8px;
+  max-height: 540px;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.mini-ranking-item {
+  display: grid;
+  grid-template-columns: 2.2rem minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(40, 66, 78, 0.08);
+}
+
+.mini-ranking-item:last-child {
+  border-bottom: 0;
+}
+
+.mini-ranking-item .rank {
+  width: 2.2rem;
+  height: 2.2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(40, 66, 78, 0.08);
+  color: var(--brand-slate);
+  font-weight: 800;
+  font-size: 0.86rem;
+}
+
+.mini-ranking-item .name {
+  font-weight: 700;
+  color: var(--ink-950);
+}
+
+.mini-ranking-item .value {
+  font-weight: 800;
+  color: var(--brand-slate);
+}
+
+.mini-ranking-bar {
+  position: relative;
+  height: 8px;
+  margin-top: 6px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #e7e3db;
+}
+
+.mini-ranking-bar span {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--insight-accent) 38%, #f1d1a4 62%), var(--insight-accent));
+}
+
+.chapter-editorial-grid {
+  margin-top: 16px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+}
+
+@media (min-width: 1201px) {
+  .insight-bottom-grid > .insight-evidence-card,
+  .insight-bottom-grid > .insight-ranking-card {
+    height: 720px;
+  }
+
+  .insight-bottom-grid .evidence-grid,
+  .insight-bottom-grid .mini-ranking-list {
+    flex: 1 1 auto;
+    min-height: 0;
+    max-height: none;
+    overflow: auto;
+  }
+
+  .insight-bottom-grid .evidence-grid {
+    padding-right: 4px;
+  }
+}
+
+.chapter-visual-card .chapter-visual,
+.insight-closing-figure {
+  margin-top: 12px;
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(40, 66, 78, 0.12);
+  background:
+    radial-gradient(circle at 22% 18%, var(--insight-accent-soft), transparent 24%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(246, 241, 233, 0.98));
+}
+
+.insight-closing-grid {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+}
+
+.insight-empty {
+  margin: 0;
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px dashed rgba(40, 66, 78, 0.16);
+  background: rgba(255, 255, 255, 0.88);
+}
+
+@media (max-width: 1200px) {
+  .insight-hero-grid,
+  .statewide-context-grid,
+  .chapter-overview-grid,
+  .chapter-county-grid,
+  .insight-bottom-grid,
+  .chapter-editorial-grid,
+  .insight-closing-grid,
+  .insight-section-glance,
+  .statewide-stat-grid,
+  .insight-meta-grid,
+  .insight-reference-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .insight-bottom-grid {
+    align-items: start;
+  }
+
+  .insight-bottom-grid > .insight-evidence-card,
+  .insight-bottom-grid > .insight-ranking-card {
+    height: auto;
+  }
+}
+
+@media (max-width: 980px) {
+  .statewide-headline-card {
+    grid-template-columns: 1fr;
+  }
+
+  .statewide-headline-card .story-box-group {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .statewide-spotlight-card .evidence-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mini-ranking-list,
+  .chapter-statewide-card .statewide-series-list {
+    max-height: 460px;
+  }
+}
+
+@media (max-width: 860px) {
+  .insight-hero,
+  .insight-section {
+    padding: 18px 16px;
+  }
+
+  .insight-section-head {
+    flex-direction: column;
+  }
+
+  .insight-select-shell,
+  .insight-section-static-chip {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .insight-section-nav {
+    gap: 8px;
+  }
+
+  .insight-count-grid,
+  .chapter-county-card dl {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .insight-cover-panel,
+  .statewide-headline-card,
+  .statewide-spotlight-card,
+  .insight-meta-card,
+  .chapter-narrative-card,
+  .chapter-statewide-card,
+  .insight-map-card,
+  .chapter-county-card,
+  .insight-evidence-card,
+  .insight-ranking-card,
+  .chapter-story-card,
+  .chapter-visual-card,
+  .insight-closing-card {
+    padding: 16px;
+  }
+
+  .story-box {
+    padding: 14px 15px;
+  }
+}

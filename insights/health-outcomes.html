@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Explore social conditions and adult health outcomes side by side across Colorado's 64 counties." />
+  <link rel="icon" href="data:," />
+  <title>Community Conditions &amp; Health Outcomes | Health &amp; Community Conditions Dashboard</title>
+  <link rel="stylesheet" href="../assets/css/dashboard.css?v=3" />
+  <link rel="stylesheet" href="../assets/css/health-outcomes.css?v=3" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="page-top comparison-header">
+    <div class="page-top-inner">
+      <a class="institution-brand" href="../index.html" aria-label="Return to the Center for Equity Research dashboard">
+        <span class="institution-university">University of Denver</span>
+        <span class="institution-unit"><small>Graduate School of Social Work</small><strong>Center for Equity Research</strong></span>
+      </a>
+      <a class="comparison-back-link" href="../index.html#dashboard"><span aria-hidden="true">←</span> Back to Dashboard</a>
+    </div>
+  </header>
+
+  <main id="main-content" class="page-shell comparison-page">
+    <section class="comparison-hero" aria-labelledby="comparison-title">
+      <p class="eyebrow">Health Outcomes</p>
+      <h1 id="comparison-title">Community Conditions &amp; Health Outcomes</h1>
+      <p class="comparison-intro">Explore county patterns side by side. Choose a community condition and an adult health outcome, then select a county to compare both estimates. These descriptive comparisons do not establish cause and effect.</p>
+      <div class="comparison-context" aria-label="View information">
+        <span>64 Colorado counties</span>
+        <span>Overall population views</span>
+        <span>Linked county selection</span>
+      </div>
+    </section>
+
+    <div id="comparison-status" class="status-band comparison-status" role="status">Loading county comparisons…</div>
+    <p id="comparison-announcement" class="sr-only" aria-live="polite" aria-atomic="true"></p>
+
+    <div class="comparison-map-toolbar">
+      <p class="comparison-map-note">Each map has its own color scale. Selecting a county in either map or ranking highlights it in blue in both views. Click an empty area of either map or press Escape to return to the county overview.</p>
+    </div>
+
+    <div class="comparison-grid comparison-maps">
+      <section class="comparison-map-panel" aria-labelledby="left-map-title">
+        <div class="comparison-panel-heading">
+          <p class="eyebrow">Social condition</p>
+          <h2 id="left-map-title">Unemployment Rate</h2>
+        </div>
+        <label class="sr-only" for="left-indicator">Social condition indicator</label>
+        <select id="left-indicator" class="dashboard-select" aria-describedby="left-population">
+          <option value="unemployment_rate">Unemployment Rate</option>
+        </select>
+        <p id="left-population" class="comparison-population">Overall county estimate</p>
+        <p id="left-map-help" class="sr-only">Use arrow keys to move between counties, Enter or Space to select, and Escape to clear the selection.</p>
+        <div class="comparison-map-stage">
+          <svg id="left-map" viewBox="0 0 960 620" role="group" aria-labelledby="left-map-title" aria-describedby="left-map-description left-map-help">
+            <desc id="left-map-description">Colorado counties colored by the selected social condition. Select a county using the map or the ranking.</desc>
+          </svg>
+        </div>
+        <div id="left-legend" class="comparison-legend" aria-label="Social condition map legend"></div>
+        <article class="comparison-summary-card" aria-labelledby="left-summary-title">
+          <h3 id="left-summary-title">Colorado county overview</h3>
+          <p id="left-summary-value" class="comparison-summary-value">—</p>
+          <p id="left-summary-detail" class="comparison-summary-detail">Loading social condition estimates…</p>
+          <p id="left-summary-range" class="comparison-summary-range"></p>
+        </article>
+      </section>
+
+      <section class="comparison-map-panel" aria-labelledby="right-map-title">
+        <div class="comparison-panel-heading">
+          <p class="eyebrow">Health outcome</p>
+          <h2 id="right-map-title">Diagnosed Diabetes</h2>
+        </div>
+        <label class="sr-only" for="right-indicator">Health outcome indicator</label>
+        <select id="right-indicator" class="dashboard-select" aria-describedby="right-population">
+          <option value="diagnosed_diabetes">Diagnosed Diabetes</option>
+        </select>
+        <p id="right-population" class="comparison-population">Adults aged 18+ · Age-adjusted prevalence</p>
+        <p id="right-map-help" class="sr-only">Use arrow keys to move between counties, Enter or Space to select, and Escape to clear the selection.</p>
+        <div class="comparison-map-stage">
+          <svg id="right-map" viewBox="0 0 960 620" role="group" aria-labelledby="right-map-title" aria-describedby="right-map-description right-map-help">
+            <desc id="right-map-description">Colorado counties colored by the selected health outcome. County selection is shared with the social condition map.</desc>
+          </svg>
+        </div>
+        <div id="right-legend" class="comparison-legend" aria-label="Health outcome map legend"></div>
+        <article class="comparison-summary-card" aria-labelledby="right-summary-title">
+          <h3 id="right-summary-title">Colorado county overview</h3>
+          <p id="right-summary-value" class="comparison-summary-value">—</p>
+          <p id="right-summary-detail" class="comparison-summary-detail">Loading health outcome estimates…</p>
+          <p id="right-summary-range" class="comparison-summary-range"></p>
+        </article>
+      </section>
+    </div>
+
+    <section class="comparison-section" aria-labelledby="comparison-rankings-title">
+      <div class="comparison-section-heading">
+        <h2 id="comparison-rankings-title">County rankings</h2>
+        <p>Counties are ordered from highest to lowest estimate. Select a county in either list to compare it in both views.</p>
+      </div>
+      <div class="comparison-grid comparison-rankings">
+        <section class="comparison-ranking-panel" aria-labelledby="left-ranking-title">
+          <p class="eyebrow">Social condition</p>
+          <h3 id="left-ranking-title">Unemployment Rate</h3>
+          <ol id="left-ranking-list" class="comparison-ranking-list" aria-labelledby="left-ranking-title" tabindex="0"></ol>
+        </section>
+        <section class="comparison-ranking-panel" aria-labelledby="right-ranking-title">
+          <p class="eyebrow">Health outcome</p>
+          <h3 id="right-ranking-title">Diagnosed Diabetes</h3>
+          <ol id="right-ranking-list" class="comparison-ranking-list" aria-labelledby="right-ranking-title" tabindex="0"></ol>
+        </section>
+      </div>
+      <p class="comparison-ranking-note">Health outcome values are modeled age-adjusted estimates. Ordering does not establish statistically significant differences between counties.</p>
+    </section>
+
+    <section class="comparison-section comparison-methods" aria-labelledby="comparison-methods-title">
+      <div class="comparison-section-heading">
+        <h2 id="comparison-methods-title">Sources and interpretation</h2>
+      </div>
+      <div class="comparison-grid">
+        <article class="comparison-source-card">
+          <p class="eyebrow">Social condition</p>
+          <h3>American Community Survey</h3>
+          <p class="comparison-data-year">2024 five-year estimates (2020–2024)</p>
+          <p id="left-source"></p>
+          <p id="left-definition"></p>
+          <p>Overall estimates use each indicator’s defined population. No demographic or intersectional filters are applied in this comparison view.</p>
+        </article>
+        <article class="comparison-source-card">
+          <p class="eyebrow">Health outcome</p>
+          <h3>CDC PLACES</h3>
+          <p class="comparison-data-year">2025 release · 2023 BRFSS · Adults aged 18+</p>
+          <p id="right-source"></p>
+          <p id="right-definition"></p>
+          <p id="right-interpretation"></p>
+          <p>Age-adjusted prevalence supports comparisons across counties with different age structures. It is a modeled estimate, not a patient count or a count-derived share.</p>
+          <p><a href="https://data.cdc.gov/d/swc5-untb" target="_blank" rel="noopener">CDC PLACES data</a> · <a href="https://www.cdc.gov/places/" target="_blank" rel="noopener">About CDC PLACES</a></p>
+        </article>
+      </div>
+      <p class="comparison-interpretation-note">These views compare county-level patterns from different sources, years, and populations. PLACES does not publish demographic breakdowns for these estimates. Side-by-side patterns do not establish individual-level relationships or causation.</p>
+    </section>
+
+    <footer class="page-foot">
+      <p>Health &amp; Community Conditions Dashboard · Center for Equity Research · University of Denver Graduate School of Social Work · © 2026 University of Denver.</p>
+    </footer>
+  </main>
+  <noscript><p class="noscript-note">JavaScript is required to display the county maps and comparison controls.</p></noscript>
+  <script src="../assets/data/health-comparison-data.js"></script>
+  <script src="../assets/js/health-outcomes.js?v=2"></script>
+</body>
+</html>

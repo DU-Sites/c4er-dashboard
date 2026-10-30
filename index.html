@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="data:," />
+  <meta
+    name="description"
+    content="Explore Colorado county-level social, economic, environmental, and community conditions that influence health and well-being, with health outcomes and supported population insights from the Center for Equity Research."
+  />
+  <title>Health &amp; Community Conditions Dashboard</title>
+  <link rel="stylesheet" href="./assets/css/dashboard.css?v=3" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="page-top" role="banner">
+    <div class="page-top-inner">
+      <a class="institution-brand" href="https://socialwork.du.edu/center-equity-research" aria-label="Center for Equity Research at the University of Denver Graduate School of Social Work">
+        <span class="institution-university">University of Denver</span>
+        <span class="institution-unit"><small>Graduate School of Social Work</small><strong>Center for Equity Research</strong></span>
+      </a>
+      <nav class="quick-links" aria-label="On-page sections">
+        <a href="#dashboard">Dashboard</a>
+        <a href="#frameworks">Frameworks</a>
+        <a href="#insights">Insights</a>
+        <a href="#methods">Methods</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="page-shell" role="main">
+    <section class="hero reveal" aria-labelledby="hero-title">
+      <h1 id="hero-title">Health &amp; Community <span class="hero-title-phrase">Conditions Dashboard</span></h1>
+      <p class="hero-tagline">Explore local conditions and health patterns across Colorado.</p>
+      <p class="hero-copy">Explore social, economic, environmental, and community conditions alongside adult health outcomes across Colorado’s 64 counties. Use this Center for Equity Research dashboard to compare places and examine local patterns.</p>
+      <p class="hero-copy">Select an indicator to compare counties. Some social conditions include group-level views from the American Community Survey (ACS); CDC PLACES provides countywide adult health estimates. Comparisons show patterns, not causes.</p>
+      <div class="hero-actions">
+        <a class="button-primary" href="#dashboard">Explore Dashboard</a>
+        <a class="button-secondary" href="#contact">Connect with C4ER</a>
+      </div>
+      <div class="metric-strip" aria-label="Quick summary metrics">
+        <article class="metric-chip">
+          <span class="metric-value" data-metric="county_count">64</span>
+          <span class="metric-label">Colorado counties</span>
+        </article>
+        <article class="metric-chip">
+          <span class="metric-value" data-metric="indicator_count">14</span>
+          <span class="metric-label">Indicators</span>
+        </article>
+        <article class="metric-chip">
+          <span class="metric-value" data-metric="subgroup_count">0</span>
+          <span class="metric-label">Available subgroup views</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="frameworks" class="section reveal" aria-labelledby="frameworks-title">
+      <div class="section-head">
+        <h2 id="frameworks-title">Frameworks</h2>
+      </div>
+      <div class="framework-grid">
+        <article class="framework-card framework-card-visual">
+          <div class="framework-copy">
+            <p class="eyebrow">Social Determinants of Health (SDOH)</p>
+            <h3>Why community conditions matter</h3>
+            <p>
+              Social determinants of health are non-medical factors that affect health outcomes. They include the
+              conditions in which people are born, grow, work, live, and age, along with the broader forces and
+              systems that shape everyday life.
+            </p>
+            <p class="framework-source">
+              <a href="https://www.cdc.gov/socialdeterminants/" target="_blank" rel="noopener">Source: CDC</a>
+            </p>
+          </div>
+          <div class="framework-figure">
+            <img src="./assets/images/sdoh-icons.png" alt="Illustration of social determinants of health domains." />
+          </div>
+        </article>
+
+        <article class="framework-card framework-card-visual">
+          <div class="framework-copy">
+            <p class="eyebrow">Intersectionality</p>
+            <h3>Overlapping identities matter</h3>
+            <p>
+              Intersectionality, coined by <a href="https://en.wikipedia.org/wiki/Kimberl%C3%A9_Crenshaw" target="_blank" rel="noopener">Kimberl&eacute; Crenshaw</a>
+              in 1989, highlights how overlapping social identities, such as race, gender, age, nativity, and
+              disability, can produce distinct patterns of advantage, exclusion, and risk. This dashboard only
+              exposes subgroup combinations when the ACS source tables support them objectively. <a href="https://doi.org/10.1017/S1742058X13000349" target="_blank" rel="noopener">Foundational reference</a>.
+            </p>
+            <p class="framework-source">
+              <a href="https://iwda.org.au/what-does-intersectional-feminism-actually-mean/" target="_blank" rel="noopener">Source: IWDA framework illustration</a>
+            </p>
+          </div>
+          <div class="framework-figure">
+            <img src="./assets/images/intersectionality-diagram.png" alt="Intersectionality diagram showing overlapping identity dimensions." />
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="dashboard" class="section reveal" aria-labelledby="dashboard-title">
+      <div class="section-head">
+        <h2 id="dashboard-title">Explore Colorado Counties</h2>
+        <p>
+          Select a domain and indicator. Explore population groups where supported by ACS tables; health outcomes show overall adult county estimates from CDC PLACES.
+        </p>
+      </div>
+
+      <div class="dashboard-shell">
+        <div class="control-stack" aria-label="Dashboard filters">
+          <div class="control-row">
+            <section class="filter-card filter-card-wide" aria-labelledby="domain-label">
+              <div class="filter-header">
+                <p id="domain-label" class="filter-label">Domain</p>
+              </div>
+              <div id="domain-pills" class="pill-group" role="group" aria-labelledby="domain-label"></div>
+            </section>
+
+            <section class="filter-card" aria-labelledby="indicator-label">
+              <div class="filter-header">
+                <p id="indicator-label" class="filter-label">Indicator</p>
+              </div>
+              <label class="sr-only" for="indicator-select">Indicator</label>
+              <select id="indicator-select" class="dashboard-select"></select>
+            </section>
+          </div>
+
+          <div class="control-row">
+            <section class="filter-card filter-card-wide" aria-labelledby="dimension-label">
+              <div class="filter-header">
+                <p id="dimension-label" class="filter-label">Population Dimension</p>
+              </div>
+              <div id="dimension-pills" class="pill-group pill-group-multi" aria-labelledby="dimension-label"></div>
+            </section>
+
+            <section class="filter-card" aria-labelledby="subgroup-label">
+              <div class="filter-header">
+                <p id="subgroup-label" class="filter-label">Subgroup</p>
+              </div>
+              <label class="sr-only" for="subgroup-select">Subgroup</label>
+              <select id="subgroup-select" class="dashboard-select"></select>
+            </section>
+          </div>
+        </div>
+
+        <div class="status-band" id="status-band" aria-live="polite"></div>
+
+        <div class="dashboard-main">
+          <section class="map-panel" aria-labelledby="map-title">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">County Map</p>
+                <h3 id="map-title">Colorado county distribution</h3>
+              </div>
+            </div>
+            <p class="panel-copy">Click a county to inspect it, or click the gray background to return to the Colorado-wide summary.</p>
+            <p id="map-keyboard-help" class="sr-only">Use the arrow keys to move between counties, Home or End to move to the first or last county, Enter or Space to select, and Escape to clear the selection.</p>
+            <div class="map-stage">
+              <svg id="county-map" viewBox="0 0 960 620" role="group" aria-labelledby="map-title" aria-describedby="map-desc map-keyboard-help">
+                <title id="map-title-svg">Colorado county choropleth</title>
+                <desc id="map-desc">County-level values update when the indicator or subgroup changes.</desc>
+                <defs>
+                  <pattern id="suppressedPattern" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                    <rect width="8" height="8" fill="#f4d9bf"></rect>
+                    <line x1="0" y1="0" x2="0" y2="8" stroke="#855f33" stroke-width="2"></line>
+                  </pattern>
+                </defs>
+                <g id="map-layer"></g>
+                <g id="map-highlight-layer" aria-hidden="true" pointer-events="none"></g>
+              </svg>
+              <div id="map-empty" class="map-empty is-hidden"></div>
+            </div>
+            <div class="legend-row">
+              <div id="legend-scale" class="legend-scale"></div>
+              <div class="legend-key">
+                <span><i class="legend-swatch legend-swatch-suppressed"></i>Suppressed</span>
+                <span><i class="legend-swatch legend-swatch-muted"></i>Unavailable / Incomplete</span>
+              </div>
+            </div>
+          </section>
+
+          <aside class="detail-panel" aria-labelledby="detail-title">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">County Detail</p>
+                <h3 id="detail-title">Selection summary</h3>
+              </div>
+            </div>
+            <div class="detail-card">
+              <p id="selected-county" class="detail-county">Loading summary...</p>
+              <p id="selected-value" class="detail-value">--</p>
+              <div id="selected-status" class="detail-status"></div>
+            </div>
+            <div id="detail-summary" class="detail-summary-grid" aria-label="County status summary">
+              <article class="detail-summary-item">
+                <span class="detail-summary-label">Available</span>
+                <strong id="summary-usable" class="detail-summary-value">--</strong>
+                <span id="summary-usable-share" class="detail-summary-note">--</span>
+              </article>
+            </div>
+            <dl class="detail-grid">
+              <div>
+                <dt>Indicator</dt>
+                <dd id="detail-indicator">--</dd>
+              </div>
+              <div>
+                <dt>Subgroup</dt>
+                <dd id="detail-subgroup">--</dd>
+              </div>
+              <div>
+                <dt>Support</dt>
+                <dd id="detail-support">--</dd>
+              </div>
+              <div>
+                <dt>Source</dt>
+                <dd id="detail-source">--</dd>
+              </div>
+            </dl>
+            <dl id="health-estimate-details" class="detail-grid" hidden>
+              <div><dt>Estimate type</dt><dd>Age-adjusted prevalence (%)</dd></div>
+              <div><dt>95% confidence interval</dt><dd id="detail-ci">Select a county</dd></div>
+              <div><dt>Data year</dt><dd>2023 BRFSS</dd></div>
+              <div><dt>Release year</dt><dd>2025</dd></div>
+            </dl>
+            <div class="definition-panel" aria-labelledby="definition-title">
+              <p class="eyebrow" id="definition-title">Metric Definition</p>
+              <p id="definition-formula" class="definition-formula">--</p>
+            </div>
+            <p id="detail-note" class="detail-note"></p>
+          </aside>
+        </div>
+
+        <section class="ranking-panel" aria-labelledby="ranking-title">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">County Comparison</p>
+              <h3 id="ranking-title">County ranking for current view</h3>
+            </div>
+          </div>
+          <p id="health-ranking-note" class="detail-note" hidden>Values are modeled age-adjusted estimates. Ordering does not establish statistically significant differences between counties.</p>
+          <div id="ranking-list" class="ranking-list"></div>
+        </section>
+      </div>
+    </section>
+
+    <section id="insights" class="section reveal" aria-labelledby="insights-title">
+      <div class="section-head">
+        <h2 id="insights-title">Intersectional Insights</h2>
+        <p>Explore poverty, unemployment, and disability through the population groups and intersections supported by ACS data.</p>
+      </div>
+      <div class="insights-grid">
+        <a class="insight-card insight-link insight-link--poverty" href="./insights/poverty.html" aria-label="Open poverty intersectional insights">
+          <span class="insight-link-title">Poverty</span>
+        </a>
+        <a class="insight-card insight-link insight-link--unemployment" href="./insights/unemployment.html" aria-label="Open unemployment intersectional insights">
+          <span class="insight-link-title">Unemployment</span>
+        </a>
+        <a class="insight-card insight-link insight-link--disability" href="./insights/disability.html" aria-label="Open disability intersectional insights">
+          <span class="insight-link-title">Disability</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="methods" class="section reveal" aria-labelledby="methods-title">
+      <div class="section-head">
+        <h2 id="methods-title">Methods and Data Notes</h2>
+      </div>
+      <div class="method-panel">
+        <div class="source-grid">
+          <article class="source-item">
+            <h4>County rebuild</h4>
+            <p>The dashboard includes 8 social-condition indicators from ACS 2024 five-year estimates (2020–2024) and 6 adult health outcomes from CDC PLACES, 2025 release (2023 BRFSS), across 7 domains and 64 Colorado counties.</p>
+          </article>
+          <article class="source-item">
+            <h4>Health outcome estimates</h4>
+            <p>CDC PLACES uses BRFSS survey responses, Census population estimates, and ACS data to model adult prevalence. Health outcome maps use age-adjusted estimates with 95% confidence intervals. These measures have no published demographic breakdowns. Diagnosed depression reflects lifetime diagnosis history, not current symptoms.</p>
+            <p><a href="https://data.cdc.gov/d/swc5-untb" target="_blank" rel="noopener">CDC PLACES data</a> · <a href="https://www.cdc.gov/places/methodology/index.html" target="_blank" rel="noopener">Methodology</a></p>
+            <h4>ACS denominator rules</h4>
+            <p>Each metric keeps its ACS-defined universe and denominator. For example, Less Than High School is computed on subgroup members age 25+, not the full subgroup population.</p>
+          </article>
+          <article class="source-item">
+            <h4>Objective subgroup exposure</h4>
+            <p>Single-dimension and intersectional subgroup options only appear when the underlying source tables can close the rate objectively for that indicator and subgroup structure.</p>
+          </article>
+          <article class="source-item">
+            <h4>Status and aggregation logic</h4>
+            <p><span class="status-term">Suppressed</span>, <span class="status-term">Unavailable</span>, and <span class="status-term">Incomplete</span> are distinct from a measured <span class="status-term">0%</span>, and statewide ACS insight summaries are recomputed by summing available county numerators and denominators. This aggregation does not apply to age-adjusted health outcomes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section reveal" aria-labelledby="faq-title">
+      <div class="section-head">
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+        <p>Short answers for interpretation and maintenance.</p>
+      </div>
+        <div class="faq-grid">
+        <details class="faq-item">
+          <summary>Why do some dimension combinations disappear?</summary>
+          <div class="faq-answer"><div class="faq-answer-inner"><p>For ACS indicators, the subgroup dropdown shows supported combinations. CDC PLACES health outcomes are available only for all adults aged 18+; population dimension controls are disabled for those indicators.</p></div></div>
+        </details>
+        <details class="faq-item">
+          <summary>What does "Suppressed" mean?</summary>
+          <div class="faq-answer"><div class="faq-answer-inner"><p>Suppressed rows are present in the dataset but flagged for caution by the partner extract. They are distinct from a measured <span class="status-term">0%</span>.</p></div></div>
+        </details>
+        <details class="faq-item">
+          <summary>What does "Unavailable" mean?</summary>
+          <div class="faq-answer"><div class="faq-answer-inner"><p>Unavailable means the county row does not have a valid denominator for a rate. It is not the same as a measured <span class="status-term">0%</span>.</p></div></div>
+        </details>
+        <details class="faq-item">
+          <summary>What does "Incomplete" mean?</summary>
+          <div class="faq-answer"><div class="faq-answer-inner"><p>Incomplete means the partner extract does not preserve the source columns needed to close an objective county rate. This is different from a zero denominator.</p></div></div>
+        </details>
+      </div>
+    </section>
+
+    <section id="contact" class="section reveal" aria-labelledby="contact-title">
+      <div class="contact-band">
+        <h2 id="contact-title">Interested in using this dashboard for policy, practice, or community learning?</h2>
+        <p>Contact the Center for Equity Research with questions about this dashboard, its data sources, or how to interpret the county measures.</p>
+        <div class="contact-actions">
+          <a href="mailto:gssw.communications@du.edu">Email C4ER</a>
+          <a href="https://socialwork.du.edu/center-equity-research" target="_blank" rel="noopener">Visit C4ER Homepage</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="page-foot">
+      <p>Health &amp; Community Conditions Dashboard · Center for Equity Research · University of Denver Graduate School of Social Work · &copy; 2026 University of Denver.</p>
+    </footer>
+  </main>
+
+  <noscript>
+    <div class="noscript-note">This dashboard needs JavaScript enabled to load county geometry and subgroup filters.</div>
+  </noscript>
+
+  <script src="./assets/data/dashboard-data.js"></script>
+  <script src="./assets/js/dashboard.js?v=2"></script>
+</body>
+</html>

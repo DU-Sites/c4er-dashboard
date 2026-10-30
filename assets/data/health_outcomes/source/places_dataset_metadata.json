@@ -1,0 +1,1930 @@
+{
+  "id": "swc5-untb",
+  "name": "PLACES: Local Data for Better Health, County Data, 2025 release",
+  "assetType": "dataset",
+  "attribution": "Centers for Disease Control and Prevention, National Center for Chronic Disease Prevention and Health Promotion, Division of Population Health",
+  "attributionLink": "http://www.cdc.gov/nccdphp/dph/",
+  "averageRating": 0,
+  "category": "500 Cities & Places",
+  "createdAt": 1601045615,
+  "description": "This dataset contains model-based county estimates. PLACES covers the entire United States\u201450 states and the District of Columbia\u2014at county, place, census tract, and ZIP Code Tabulation Area levels. It provides information uniformly on this large scale for local areas at four geographic levels. Estimates were provided by the Centers for Disease Control and Prevention (CDC), Division of Population Health, Epidemiology and Surveillance Branch. PLACES was funded by the Robert Wood Johnson Foundation in conjunction with the CDC Foundation. This dataset includes estimates for 40 measures: 12 for health outcomes, 7 for preventive services use, 4 for chronic disease-related health risk behaviors, 7 for disabilities, 3 for health status, and 7 for health-related social needs. These estimates can be used to identify emerging health problems and to help develop and carry out effective, targeted public health prevention activities. Because the small area model cannot detect effects due to local interventions, users are cautioned against using these estimates for program or policy evaluations. Data sources used to generate these model-based estimates are Behavioral Risk Factor Surveillance System (BRFSS) 2023 or 2022 data, Census Bureau 2023 county population estimate data, and American Community Survey 2019-2023 or 2018\u20132022 estimates. The 2025 release uses 2023 BRFSS data for 35 measures and 2022 BRFSS data for 5 measures (all teeth lost, dental visits, mammograms, colorectal cancer screening,  and short sleep duration) that the survey collects data on every other year. More information about the methodology can be found at www.cdc.gov/places.",
+  "diciBackend": false,
+  "displayType": "table",
+  "downloadCount": 68050,
+  "hideFromCatalog": false,
+  "hideFromDataJson": false,
+  "licenseId": "PUBLIC_DOMAIN",
+  "locked": false,
+  "newBackend": true,
+  "numberOfComments": 0,
+  "oid": 40829292,
+  "provenance": "official",
+  "publicationAppendEnabled": false,
+  "publicationDate": 1724419712,
+  "publicationGroup": 17594588,
+  "publicationStage": "published",
+  "rowsUpdatedAt": 1764844506,
+  "rowsUpdatedBy": "fjjr-gap9",
+  "tableId": 19634707,
+  "totalTimesRated": 0,
+  "viewCount": 206761,
+  "viewLastModified": 1790118324,
+  "viewType": "tabular",
+  "approvals": [
+    {
+      "reviewedAt": 1690285914,
+      "reviewedAutomatically": true,
+      "state": "approved",
+      "submissionId": 6524456,
+      "submissionObject": "public_audience_request",
+      "submissionOutcome": "change_audience",
+      "submittedAt": 1690285914,
+      "targetAudience": "public",
+      "workflowId": 2100,
+      "submissionDetails": {
+        "permissionType": "READ"
+      },
+      "submissionOutcomeApplication": {
+        "endedAt": 1690285915,
+        "failureCount": 0,
+        "startedAt": 1690285914,
+        "status": "success"
+      },
+      "submitter": {
+        "id": "fjjr-gap9",
+        "displayName": "CDC UserSA"
+      }
+    }
+  ],
+  "clientContext": {
+    "clientContextVariables": [],
+    "inheritedVariables": {}
+  },
+  "columns": [
+    {
+      "id": 598687598,
+      "name": "Year",
+      "dataTypeName": "text",
+      "description": "Year",
+      "fieldName": "year",
+      "position": 1,
+      "renderTypeName": "text",
+      "tableColumnId": 116812858,
+      "width": 112,
+      "cachedContents": {
+        "non_null": "229298",
+        "largest": "2023",
+        "null": "0",
+        "top": [
+          {
+            "item": "2023",
+            "count": "197848"
+          },
+          {
+            "item": "2022",
+            "count": "31450"
+          }
+        ],
+        "smallest": "2022",
+        "count": "229298",
+        "cardinality": "229298"
+      },
+      "format": {}
+    },
+    {
+      "id": 598687599,
+      "name": "StateAbbr",
+      "dataTypeName": "text",
+      "description": "State abbreviation",
+      "fieldName": "stateabbr",
+      "position": 2,
+      "renderTypeName": "text",
+      "tableColumnId": 116812859,
+      "width": 101,
+      "cachedContents": {
+        "non_null": "229298",
+        "largest": "WY",
+        "null": "0",
+        "top": [
+          {
+            "item": "TX",
+            "count": "16764"
+          },
+          {
+            "item": "GA",
+            "count": "12720"
+          },
+          {
+            "item": "VA",
+            "count": "10640"
+          },
+          {
+            "item": "MO",
+            "count": "9200"
+          },
+          {
+            "item": "KS",
+            "count": "8400"
+          },
+          {
+            "item": "IL",
+            "count": "8160"
+          },
+          {
+            "item": "NC",
+            "count": "8000"
+          },
+          {
+            "item": "IA",
+            "count": "7920"
+          },
+          {
+            "item": "NE",
+            "count": "7440"
+          },
+          {
+            "item": "IN",
+            "count": "7360"
+          },
+          {
+            "item": "OH",
+            "count": "7040"
+          },
+          {
+            "item": "MN",
+            "count": "6960"
+          },
+          {
+            "item": "MI",
+            "count": "6640"
+          },
+          {
+            "item": "MS",
+            "count": "6560"
+          },
+          {
+            "item": "TN",
+            "count": "6270"
+          },
+          {
+            "item": "OK",
+            "count": "6160"
+          },
+          {
+            "item": "AR",
+            "count": "6000"
+          },
+          {
+            "item": "WI",
+            "count": "5760"
+          },
+          {
+            "item": "AL",
+            "count": "5360"
+          },
+          {
+            "item": "LA",
+            "count": "5120"
+          }
+        ],
+        "smallest": "AK",
+        "count": "229298",
+        "cardinality": "229298"
+      },
+      "format": {}
+    },
+    {
+      "id": 598687600,
+      "name": "StateDesc",
+      "dataTypeName": "text",
+      "description": "State Name",
+      "fieldName": "statedesc",
+      "position": 3,
+      "renderTypeName": "text",
+      "tableColumnId": 116812860,
+      "width": 146,
+      "cachedContents": {
+        "non_null": "229298",
+        "largest": "Wyoming",
+        "null": "0",
+        "top": [
+          {
+            "item": "Texas",
+            "count": "16764"
+          },
+          {
+            "item": "Georgia",
+            "count": "12720"
+          },
+          {
+            "item": "Virginia",
+            "count": "10640"
+          },
+          {
+            "item": "Missouri",
+            "count": "9200"
+          },
+          {
+            "item": "Kansas",
+            "count": "8400"
+          },
+          {
+            "item": "Illinois",
+            "count": "8160"
+          },
+          {
+            "item": "North Carolina",
+            "count": "8000"
+          },
+          {
+            "item": "Iowa",
+            "count": "7920"
+          },
+          {
+            "item": "Nebraska",
+            "count": "7440"
+          },
+          {
+            "item": "Indiana",
+            "count": "7360"
+          },
+          {
+            "item": "Ohio",
+            "count": "7040"
+          },
+          {
+            "item": "Minnesota",
+            "count": "6960"
+          },
+          {
+            "item": "Michigan",
+            "count": "6640"
+          },
+          {
+            "item": "Mississippi",
+            "count": "6560"
+          },
+          {
+            "item": "Tennessee",
+            "count": "6270"
+          },
+          {
+            "item": "Oklahoma",
+            "count": "6160"
+          },
+          {
+            "item": "Arkansas",
+            "count": "6000"
+          },
+          {
+            "item": "Wisconsin",
+            "count": "5760"
+          },
+          {
+            "item": "Alabama",
+            "count": "5360"
+          },
+          {
+            "item": "Louisiana",
+            "count": "5120"
+          }
+        ],
+        "smallest": "Alabama",
+        "count": "229298",
+        "cardinality": "229298"
+      },
+      "format": {}
+    },
+    {
+      "id": 598687601,
+      "name": "LocationName",
+      "dataTypeName": "text",
+      "description": "County name",
+      "fieldName": "locationname",
+      "position": 4,
+      "renderTypeName": "text",
+      "tableColumnId": 116812861,
+      "cachedContents": {
+        "non_null": "229218",
+        "largest": "Ziebach",
+        "null": "80",
+        "top": [
+          {
+            "item": "Washington",
+            "count": "2256"
+          },
+          {
+            "item": "Franklin",
+            "count": "1870"
+          },
+          {
+            "item": "Jefferson",
+            "count": "1856"
+          },
+          {
+            "item": "Lincoln",
+            "count": "1766"
+          },
+          {
+            "item": "Jackson",
+            "count": "1766"
+          },
+          {
+            "item": "Madison",
+            "count": "1488"
+          },
+          {
+            "item": "Clay",
+            "count": "1314"
+          },
+          {
+            "item": "Montgomery",
+            "count": "1272"
+          },
+          {
+            "item": "Union",
+            "count": "1244"
+          },
+          {
+            "item": "Marion",
+            "count": "1234"
+          },
+          {
+            "item": "Monroe",
+            "count": "1192"
+          },
+          {
+            "item": "Wayne",
+            "count": "1126"
+          },
+          {
+            "item": "Grant",
+            "count": "1088"
+          },
+          {
+            "item": "Greene",
+            "count": "1036"
+          },
+          {
+            "item": "Warren",
+            "count": "966"
+          },
+          {
+            "item": "Carroll",
+            "count": "956"
+          },
+          {
+            "item": "Polk",
+            "count": "904"
+          },
+          {
+            "item": "Douglas",
+            "count": "904"
+          },
+          {
+            "item": "Lake",
+            "count": "890"
+          },
+          {
+            "item": "Adams",
+            "count": "862"
+          }
+        ],
+        "smallest": "Abbeville",
+        "count": "229298",
+        "cardinality": "229298"
+      },
+      "format": {}
+    },
+    {
+      "id": 598687602,
+      "name": "DataSource",
+      "dataTypeName": "text",
+      "description": "Data source",
+      "fieldName": "datasource",
+      "position": 5,
+      "renderTypeName": "text",
+      "tableColumnId": 116812862,
+      "cachedContents": {
+        "non_null": "229298",
+        "largest": "BRFSS",
+        "null": "0",
+        "top": [
+          {
+            "item": "BRFSS",
+            "count": "229298"
+          }
+        ],
+        "smallest": "BRFSS",
+        "count": "229298",
+        "cardinality": "229298"
+      },
+      "format": {}
+    },
+    {
+      "id": 598687603,
+      "name": "Category",
+      "dataTypeName": "text",
+      "description": "Topic",
+      "fieldName": "category",
+      "position": 6,
+      "renderTypeName": "text",
+      "tableColumnId": 116812863,
+      "cachedContents": {
+        "non_null": "229298",
+        "largest": "Prevention",
+        "null": "0",
+        "top": [
+          {
+            "item": "Health Outcomes",
+            "count": "71366"
+          },
+          {
+            "item": "Prevention",
+            "count": "42534"
+          },
+          {
+            "item": "Disability",
+            "count": "41412"
+          },
+          {
+            "item": "Health-Related Social Needs",
+            "count": "32200"
+          },
+          {
+            "item": "Health Risk Behaviors",
+            "count": "24038"
+          },
+          {
+            "item": "Health Status",
+            "count": "17748"
+          }
+        ],
+        "smallest": "Disability",
+        "count": "229298",
+        "cardinality": "229298"
+      },
+      "format": {}
+    },
+    {
+      "id": 598687604,
+      "name": "Measure",
+      "dataTypeName": "text",
+      "description": "Measure full name",
+      "fieldName": "measure",
+      "position": 7,
+      "renderTypeName": "text",
+      "tableColumnId": 116812864,
+      "width": 341,
+      "cachedContents": {
+        "non_null": "229298",
+        "largest": "Visits to doctor for routine checkup within the past year among adults",
+        "null": "0",
+        "top": [
+          {
+            "item": "Colorectal cancer screening among adults aged 45\u201375 years",
+            "count": "6290"
+          },
+          {
+            "item": "Short sleep duration among adults",
+            "count": "6290"
+          },
+          {
+            "item": "Visited dentist or dental clinic in the past year among adults",
+            "count": "6290"
+          },
+          {
+            "item": "Mammography use among women aged 50-74 years",
+            "count": "6290"
+          },
+          {
+            "item": "All teeth lost among adults aged >=65 years",
+            "count": "6290"
+          },
+          {
+            "item": "Vision disability among adults",
+            "count": "5916"
+          },
+          {
+            "item": "Visits to doctor for routine checkup within the past year among adults",
+            "count": "5916"
+          },
+          {
+            "item": "Obesity among adults",
+            "count": "5916"
+          },
+          {
+            "item": "Arthritis among adults",
+            "count": "5916"
+          },
+          {
+            "item": "Current cigarette smoking among adults",
+            "count": "5916"
+          },
+          {
+            "item": "Independent living disability among adults",
+            "count": "5916"
+          },
+          {
+            "item": "Diagnosed diabetes among adults",
+            "count": "5916"
+          },
+          {
+            "item": "Cholesterol screening among adults",
+            "count": "5916"
+          },
+          {
+            "item": "Hearing disability among adults",
+            "count": "5916"
+          },
+          {
+            "item": "Depression among adults",
+            "count": "5916"
+          },
+          {
+            "item": "No leisure-time physical activity among adults",
+            "count": "5916"
+          },
+          {
+            "item": "Binge drinking among adults",
+            "count": "5916"
+          },
+          {
+            "item": "High blood pressure among adults",
+            "count": "5916"
+          },
+          {
+            "item": "Frequent mental distress among adults",
+            "count": "5916"
+          },
+          {
+            "item": "Taking medicine to control high blood pressure among adults with high blood pressure",
+            "count": "5916"
+          }
+        ],
+        "smallest": "All teeth lost among adults aged >=65 years",
+        "count": "229298",
+        "cardinality": "229298"
+      },
+      "format": {}
+    },
+    {
+      "id": 598687605,
+      "name": "Data_Value_Unit",
+      "dataTypeName": "text",
+      "description": "The data value unit, such as \"%\" for percentage",
+      "fieldName": "data_value_unit",
+      "position": 8,
+      "renderTypeName": "text",
+      "tableColumnId": 116812865,
+      "width": 119,
+      "cachedContents": {
+        "non_null": "229298",
+        "largest": "%",
+        "null": "0",
+        "top": [
+          {
+            "item": "%",
+            "count": "229298"
+          }
+        ],
+        "smallest": "%",
+        "count": "229298",
+        "cardinality": "229298"
+      },
+      "format": {}
+    },
+    {
+      "id": 598687606,
+      "name": "Data_Value_Type",
+      "dataTypeName": "text",
+      "description": "The data type, such as age-adjusted prevalence or crude prevalence",
+      "fieldName": "data_value_type",
+      "position": 9,
+      "renderTypeName": "text",
+      "tableColumnId": 116812866,
+      "cachedContents": {
+        "non_null": "229298",
+        "largest": "Crude prevalence",
+        "null": "0",
+        "top": [
+          {
+            "item": "Age-adjusted prevalence",
+            "count": "114649"
+          },
+          {
+            "item": "Crude prevalence",
+            "count": "114649"
+          }
+        ],
+        "smallest": "Age-adjusted prevalence",
+        "count": "229298",
+        "cardinality": "229298"
+      },
+      "format": {}
+    },
+    {
+      "id": 598687607,
+      "name": "Data_Value",
+      "dataTypeName": "number",
+      "description": "Data Value, such as 14.7",
+      "fieldName": "data_value",
+      "position": 10,
+      "renderTypeName": "number",
+      "tableColumnId": 121947574,
+      "width": 136,
+      "cachedContents": {
+        "non_null": "229232",
+        "largest": "93.3",
+        "null": "66",
+        "top": [
+          {
+            "item": "7.4",
+            "count": "1289"
+          },
+          {
+            "item": "7.3",
+            "count": "1286"
+          },
+          {
+            "item": "7.2",
+            "count": "1183"
+          },
+          {
+            "item": "7.5",
+            "count": "1160"
+          },
+          {
+            "item": "7.6",
+            "count": "1119"
+          },
+          {
+            "item": "7.1",
+            "count": "1063"
+          },
+          {
+            "item": "7.0",
+            "count": "1060"
+          },
+          {
+            "item": "6.9",
+            "count": "1025"
+          },
+          {
+            "item": "10.1",
+            "count": "1015"
+          },
+          {
+            "item": "10.0",
+            "count": "1005"
+          },
+          {
+            "item": "7.7",
+            "count": "992"
+          },
+          {
+            "item": "10.5",
+            "count": "992"
+          },
+          {
+            "item": "7.8",
+            "count": "990"
+          },
+          {
+            "item": "9.9",
+            "count": "974"
+          },
+          {
+            "item": "9.2",
+            "count": "973"
+          },
+          {
+            "item": "6.7",
+            "count": "969"
+          },
+          {
+            "item": "9.8",
+            "count": "964"
+          },
+          {
+            "item": "10.3",
+            "count": "964"
+          },
+          {
+            "item": "10.2",
+            "count": "963"
+          },
+          {
+            "item": "9.7",
+            "count": "962"
+          }
+        ],
+        "smallest": "1.7",
+        "count": "229298",
+        "cardinality": "229298"
+      },
+      "format": {
+        "precision": "1"
+      }
+    },
+    {
+      "id": 598687608,
+      "name": "Data_Value_Footnote_Symbol",
+      "dataTypeName": "text",
+      "description": "Footnote symbol",
+      "fieldName": "data_value_footnote_symbol",
+      "position": 11,
+      "renderTypeName": "text",
+      "tableColumnId": 116812868,
+      "width": 135,
+      "cachedContents": {
+        "non_null": "80",
+        "largest": "#",
+        "null": "229218",
+        "top": [
+          {
+            "item": "*",
+            "count": "66"
+          },
+          {
+            "item": "#",
+            "count": "14"
+          }
+        ],
+        "smallest": "*",
+        "count": "229298",
+        "cardinality": "229298"
+      },
+      "format": {}
+    },
+    {
+      "id": 598687609,
+      "name": "Data_Value_Footnote",
+      "dataTypeName": "text",
+      "description": "Footnote text",
+      "fieldName": "data_value_footnote",
+      "position": 12,
+      "renderTypeName": "text",
+      "tableColumnId": 116812869,
+      "cachedContents": {
+        "non_null": "80",
+        "largest": "The estimates are based on 39 states and DC.",
+        "null": "229218",
+        "top": [
+          {
+            "item": "Estimates suppressed for population less than 50",
+            "count": "66"
+          },
+          {
+            "item": "The estimates are based on 39 states and DC.",
+            "count": "14"
+          }
+        ],
+        "smallest": "Estimates suppressed for population less than 50",
+        "count": "229298",
+        "cardinality": "229298"
+      },
+      "format": {}
+    },
+    {
+      "id": 598687610,
+      "name": "Low_Confidence_Limit",
+      "dataTypeName": "number",
+      "description": "Low confidence limit",
+      "fieldName": "low_confidence_limit",
+      "position": 13,
+      "renderTypeName": "number",
+      "tableColumnId": 121947571,
+      "width": 166,
+      "cachedContents": {
+        "non_null": "229232",
+        "largest": "92.2",
+        "null": "66",
+        "top": [
+          {
+            "item": "6.6",
+            "count": "1590"
+          },
+          {
+            "item": "6.5",
+            "count": "1485"
+          },
+          {
+            "item": "6.7",
+            "count": "1419"
+          },
+          {
+            "item": "6.3",
+            "count": "1329"
+          },
+          {
+            "item": "6.4",
+            "count": "1321"
+          },
+          {
+            "item": "6.8",
+            "count": "1303"
+          },
+          {
+            "item": "6.2",
+            "count": "1278"
+          },
+          {
+            "item": "5.9",
+            "count": "1265"
+          },
+          {
+            "item": "6.1",
+            "count": "1242"
+          },
+          {
+            "item": "6.9",
+            "count": "1199"
+          },
+          {
+            "item": "6.0",
+            "count": "1184"
+          },
+          {
+            "item": "5.8",
+            "count": "1178"
+          },
+          {
+            "item": "8.9",
+            "count": "1166"
+          },
+          {
+            "item": "9.2",
+            "count": "1155"
+          },
+          {
+            "item": "5.6",
+            "count": "1148"
+          },
+          {
+            "item": "5.7",
+            "count": "1146"
+          },
+          {
+            "item": "8.8",
+            "count": "1144"
+          },
+          {
+            "item": "9.1",
+            "count": "1144"
+          },
+          {
+            "item": "9.0",
+            "count": "1141"
+          },
+          {
+            "item": "9.6",
+            "count": "1137"
+          }
+        ],
+        "smallest": "1.5",
+        "count": "229298",
+        "cardinality": "229298"
+      },
+      "format": {
+        "precision": "1"
+      }
+    },
+    {
+      "id": 598687611,
+      "name": "High_Confidence_Limit",
+      "dataTypeName": "number",
+      "description": "High confidence limit",
+      "fieldName": "high_confidence_limit",
+      "position": 14,
+      "renderTypeName": "number",
+      "tableColumnId": 121947572,
+      "width": 144,
+      "cachedContents": {
+        "non_null": "229232",
+        "largest": "94.2",
+        "null": "66",
+        "top": [
+          {
+            "item": "8.1",
+            "count": "1079"
+          },
+          {
+            "item": "8.2",
+            "count": "1050"
+          },
+          {
+            "item": "8.3",
+            "count": "984"
+          },
+          {
+            "item": "8.0",
+            "count": "932"
+          },
+          {
+            "item": "8.4",
+            "count": "885"
+          },
+          {
+            "item": "11.3",
+            "count": "883"
+          },
+          {
+            "item": "7.9",
+            "count": "873"
+          },
+          {
+            "item": "11.5",
+            "count": "857"
+          },
+          {
+            "item": "11.8",
+            "count": "856"
+          },
+          {
+            "item": "12.0",
+            "count": "855"
+          },
+          {
+            "item": "7.6",
+            "count": "849"
+          },
+          {
+            "item": "11.7",
+            "count": "848"
+          },
+          {
+            "item": "11.6",
+            "count": "848"
+          },
+          {
+            "item": "11.4",
+            "count": "845"
+          },
+          {
+            "item": "7.8",
+            "count": "844"
+          },
+          {
+            "item": "12.4",
+            "count": "837"
+          },
+          {
+            "item": "12.1",
+            "count": "833"
+          },
+          {
+            "item": "11.2",
+            "count": "833"
+          },
+          {
+            "item": "10.7",
+            "count": "831"
+          },
+          {
+            "item": "11.0",
+            "count": "827"
+          }
+        ],
+        "smallest": "1.9",
+        "count": "229298",
+        "cardinality": "229298"
+      },
+      "format": {
+        "precision": "1"
+      }
+    },
+    {
+      "id": 598687612,
+      "name": "TotalPopulation",
+      "dataTypeName": "number",
+      "description": "Total population of census 2023 estimates",
+      "fieldName": "totalpopulation",
+      "position": 15,
+      "renderTypeName": "number",
+      "tableColumnId": 121947573,
+      "width": 159,
+      "cachedContents": {
+        "non_null": "229298",
+        "largest": "334914895",
+        "null": "0",
+        "top": [
+          {
+            "item": "8810",
+            "count": "240"
+          },
+          {
+            "item": "25619",
+            "count": "170"
+          },
+          {
+            "item": "1743",
+            "count": "160"
+          },
+          {
+            "item": "3427",
+            "count": "160"
+          },
+          {
+            "item": "31555",
+            "count": "160"
+          },
+          {
+            "item": "13661",
+            "count": "160"
+          },
+          {
+            "item": "14705",
+            "count": "160"
+          },
+          {
+            "item": "28266",
+            "count": "160"
+          },
+          {
+            "item": "25796",
+            "count": "160"
+          },
+          {
+            "item": "35320",
+            "count": "160"
+          },
+          {
+            "item": "16971",
+            "count": "160"
+          },
+          {
+            "item": "36785",
+            "count": "160"
+          },
+          {
+            "item": "1847",
+            "count": "160"
+          },
+          {
+            "item": "30899",
+            "count": "160"
+          },
+          {
+            "item": "9897",
+            "count": "160"
+          },
+          {
+            "item": "3461",
+            "count": "160"
+          },
+          {
+            "item": "16013",
+            "count": "160"
+          },
+          {
+            "item": "10489",
+            "count": "160"
+          },
+          {
+            "item": "6557",
+            "count": "160"
+          },
+          {
+            "item": "9914",
+            "count": "160"
+          }
+        ],
+        "smallest": "43",
+        "count": "229298",
+        "cardinality": "229298"
+      },
+      "format": {}
+    },
+    {
+      "id": 598687623,
+      "name": "TotalPop18plus",
+      "dataTypeName": "number",
+      "description": "Total population 18 and plus of census 2023 estimates",
+      "fieldName": "totalpop18plus",
+      "position": 16,
+      "renderTypeName": "number",
+      "tableColumnId": 154609941,
+      "cachedContents": {
+        "non_null": "229298",
+        "largest": "262083034",
+        "null": "0",
+        "top": [
+          {
+            "item": "6918",
+            "count": "160"
+          },
+          {
+            "item": "17444",
+            "count": "160"
+          },
+          {
+            "item": "5096",
+            "count": "160"
+          },
+          {
+            "item": "12706",
+            "count": "160"
+          },
+          {
+            "item": "18726",
+            "count": "160"
+          },
+          {
+            "item": "7310",
+            "count": "160"
+          },
+          {
+            "item": "8784",
+            "count": "160"
+          },
+          {
+            "item": "8819",
+            "count": "160"
+          },
+          {
+            "item": "4068",
+            "count": "160"
+          },
+          {
+            "item": "1493",
+            "count": "160"
+          },
+          {
+            "item": "4062",
+            "count": "160"
+          },
+          {
+            "item": "5423",
+            "count": "160"
+          },
+          {
+            "item": "4429",
+            "count": "160"
+          },
+          {
+            "item": "3059",
+            "count": "160"
+          },
+          {
+            "item": "17877",
+            "count": "160"
+          },
+          {
+            "item": "2242",
+            "count": "160"
+          },
+          {
+            "item": "17270",
+            "count": "160"
+          },
+          {
+            "item": "4907",
+            "count": "160"
+          },
+          {
+            "item": "12791",
+            "count": "160"
+          },
+          {
+            "item": "2772",
+            "count": "160"
+          }
+        ],
+        "smallest": "30",
+        "count": "229298",
+        "cardinality": "229298"
+      },
+      "format": {}
+    },
+    {
+      "id": 598687615,
+      "name": "LocationID",
+      "dataTypeName": "text",
+      "description": "County FIPS",
+      "fieldName": "locationid",
+      "position": 19,
+      "renderTypeName": "text",
+      "tableColumnId": 116812875,
+      "width": 199,
+      "cachedContents": {
+        "non_null": "229298",
+        "largest": "59",
+        "null": "0",
+        "top": [
+          {
+            "item": "01111",
+            "count": "80"
+          },
+          {
+            "item": "31007",
+            "count": "80"
+          },
+          {
+            "item": "13133",
+            "count": "80"
+          },
+          {
+            "item": "36023",
+            "count": "80"
+          },
+          {
+            "item": "29155",
+            "count": "80"
+          },
+          {
+            "item": "20165",
+            "count": "80"
+          },
+          {
+            "item": "19095",
+            "count": "80"
+          },
+          {
+            "item": "40001",
+            "count": "80"
+          },
+          {
+            "item": "27017",
+            "count": "80"
+          },
+          {
+            "item": "20047",
+            "count": "80"
+          },
+          {
+            "item": "26147",
+            "count": "80"
+          },
+          {
+            "item": "13165",
+            "count": "80"
+          },
+          {
+            "item": "28039",
+            "count": "80"
+          },
+          {
+            "item": "51083",
+            "count": "80"
+          },
+          {
+            "item": "13321",
+            "count": "80"
+          },
+          {
+            "item": "28017",
+            "count": "80"
+          },
+          {
+            "item": "05089",
+            "count": "80"
+          },
+          {
+            "item": "13157",
+            "count": "80"
+          },
+          {
+            "item": "36067",
+            "count": "80"
+          },
+          {
+            "item": "29205",
+            "count": "80"
+          }
+        ],
+        "smallest": "01001",
+        "count": "229298",
+        "cardinality": "229298"
+      },
+      "format": {}
+    },
+    {
+      "id": 598687616,
+      "name": "CategoryID",
+      "dataTypeName": "text",
+      "description": "Identifier for Topic/Category",
+      "fieldName": "categoryid",
+      "position": 20,
+      "renderTypeName": "text",
+      "tableColumnId": 116812876,
+      "cachedContents": {
+        "non_null": "229298",
+        "largest": "SOCLNEED",
+        "null": "0",
+        "top": [
+          {
+            "item": "HLTHOUT",
+            "count": "71366"
+          },
+          {
+            "item": "PREVENT",
+            "count": "42534"
+          },
+          {
+            "item": "DISABLT",
+            "count": "41412"
+          },
+          {
+            "item": "SOCLNEED",
+            "count": "32200"
+          },
+          {
+            "item": "RISKBEH",
+            "count": "24038"
+          },
+          {
+            "item": "HLTHSTAT",
+            "count": "17748"
+          }
+        ],
+        "smallest": "DISABLT",
+        "count": "229298",
+        "cardinality": "229298"
+      },
+      "format": {}
+    },
+    {
+      "id": 598687617,
+      "name": "MeasureId",
+      "dataTypeName": "text",
+      "description": "Measure identifier",
+      "fieldName": "measureid",
+      "position": 21,
+      "renderTypeName": "text",
+      "tableColumnId": 116812877,
+      "cachedContents": {
+        "non_null": "229298",
+        "largest": "VISION",
+        "null": "0",
+        "top": [
+          {
+            "item": "SLEEP",
+            "count": "6290"
+          },
+          {
+            "item": "MAMMOUSE",
+            "count": "6290"
+          },
+          {
+            "item": "DENTAL",
+            "count": "6290"
+          },
+          {
+            "item": "COLON_SCREEN",
+            "count": "6290"
+          },
+          {
+            "item": "TEETHLOST",
+            "count": "6290"
+          },
+          {
+            "item": "CANCER",
+            "count": "5916"
+          },
+          {
+            "item": "CASTHMA",
+            "count": "5916"
+          },
+          {
+            "item": "CHD",
+            "count": "5916"
+          },
+          {
+            "item": "CHECKUP",
+            "count": "5916"
+          },
+          {
+            "item": "CHOLSCREEN",
+            "count": "5916"
+          },
+          {
+            "item": "COGNITION",
+            "count": "5916"
+          },
+          {
+            "item": "COPD",
+            "count": "5916"
+          },
+          {
+            "item": "CSMOKING",
+            "count": "5916"
+          },
+          {
+            "item": "DEPRESSION",
+            "count": "5916"
+          },
+          {
+            "item": "DIABETES",
+            "count": "5916"
+          },
+          {
+            "item": "DISABILITY",
+            "count": "5916"
+          },
+          {
+            "item": "GHLTH",
+            "count": "5916"
+          },
+          {
+            "item": "HEARING",
+            "count": "5916"
+          },
+          {
+            "item": "HIGHCHOL",
+            "count": "5916"
+          },
+          {
+            "item": "ACCESS2",
+            "count": "5916"
+          }
+        ],
+        "smallest": "ACCESS2",
+        "count": "229298",
+        "cardinality": "229298"
+      },
+      "format": {}
+    },
+    {
+      "id": 598687618,
+      "name": "DataValueTypeID",
+      "dataTypeName": "text",
+      "description": "Identifier for the data value type",
+      "fieldName": "datavaluetypeid",
+      "position": 22,
+      "renderTypeName": "text",
+      "tableColumnId": 116812878,
+      "cachedContents": {
+        "non_null": "229298",
+        "largest": "CrdPrv",
+        "null": "0",
+        "top": [
+          {
+            "item": "AgeAdjPrv",
+            "count": "114649"
+          },
+          {
+            "item": "CrdPrv",
+            "count": "114649"
+          }
+        ],
+        "smallest": "AgeAdjPrv",
+        "count": "229298",
+        "cardinality": "229298"
+      },
+      "format": {}
+    },
+    {
+      "id": 598687619,
+      "name": "Short_Question_Text",
+      "dataTypeName": "text",
+      "description": "Measure short name",
+      "fieldName": "short_question_text",
+      "position": 23,
+      "renderTypeName": "text",
+      "tableColumnId": 116812879,
+      "cachedContents": {
+        "non_null": "229298",
+        "largest": "Vision Disability",
+        "null": "0",
+        "top": [
+          {
+            "item": "Dental Visit",
+            "count": "6290"
+          },
+          {
+            "item": "All Teeth Lost",
+            "count": "6290"
+          },
+          {
+            "item": "Short Sleep Duration",
+            "count": "6290"
+          },
+          {
+            "item": "Mammography",
+            "count": "6290"
+          },
+          {
+            "item": "Colorectal Cancer Screening",
+            "count": "6290"
+          },
+          {
+            "item": "Cancer (non-skin) or Melanoma",
+            "count": "5916"
+          },
+          {
+            "item": "Cholesterol Screening",
+            "count": "5916"
+          },
+          {
+            "item": "Cognitive Disability",
+            "count": "5916"
+          },
+          {
+            "item": "COPD",
+            "count": "5916"
+          },
+          {
+            "item": "Coronary Heart Disease",
+            "count": "5916"
+          },
+          {
+            "item": "Current Asthma",
+            "count": "5916"
+          },
+          {
+            "item": "Current Cigarette Smoking",
+            "count": "5916"
+          },
+          {
+            "item": "Depression",
+            "count": "5916"
+          },
+          {
+            "item": "Diabetes",
+            "count": "5916"
+          },
+          {
+            "item": "Frequent Mental Distress",
+            "count": "5916"
+          },
+          {
+            "item": "Frequent Physical Distress",
+            "count": "5916"
+          },
+          {
+            "item": "General Health",
+            "count": "5916"
+          },
+          {
+            "item": "Health Insurance",
+            "count": "5916"
+          },
+          {
+            "item": "Hearing Disability",
+            "count": "5916"
+          },
+          {
+            "item": "High Blood Pressure",
+            "count": "5916"
+          }
+        ],
+        "smallest": "All Teeth Lost",
+        "count": "229298",
+        "cardinality": "229298"
+      },
+      "format": {}
+    },
+    {
+      "id": 598687620,
+      "name": "Geolocation",
+      "dataTypeName": "point",
+      "description": "Latitude, Longitude of county centroid (Format: Point(Longitude Latitude))",
+      "fieldName": "geolocation",
+      "position": 24,
+      "renderTypeName": "point",
+      "tableColumnId": 133262785,
+      "cachedContents": {
+        "non_null": "229218",
+        "null": "80",
+        "top": [
+          {
+            "item": {
+              "coordinates": [
+                -98.9588320811565,
+                46.9792224570658
+              ],
+              "type": "Point"
+            },
+            "count": "80"
+          },
+          {
+            "item": {
+              "coordinates": [
+                -92.2817259029036,
+                38.5058485320445
+              ],
+              "type": "Point"
+            },
+            "count": "80"
+          },
+          {
+            "item": {
+              "coordinates": [
+                -112.111626456113,
+                40.9899407464569
+              ],
+              "type": "Point"
+            },
+            "count": "80"
+          },
+          {
+            "item": {
+              "coordinates": [
+                -78.8129296212551,
+                37.3725859404648
+              ],
+              "type": "Point"
+            },
+            "count": "80"
+          },
+          {
+            "item": {
+              "coordinates": [
+                -84.0269604060342,
+                33.6543894732027
+              ],
+              "type": "Point"
+            },
+            "count": "80"
+          },
+          {
+            "item": {
+              "coordinates": [
+                -98.9911182720622,
+                41.9142895478018
+              ],
+              "type": "Point"
+            },
+            "count": "80"
+          },
+          {
+            "item": {
+              "coordinates": [
+                -83.7338810944706,
+                33.7813254964218
+              ],
+              "type": "Point"
+            },
+            "count": "80"
+          },
+          {
+            "item": {
+              "coordinates": [
+                -97.2442389335667,
+                33.9500550048767
+              ],
+              "type": "Point"
+            },
+            "count": "80"
+          },
+          {
+            "item": {
+              "coordinates": [
+                -94.5010798132677,
+                41.6838318967675
+              ],
+              "type": "Point"
+            },
+            "count": "80"
+          },
+          {
+            "item": {
+              "coordinates": [
+                -84.0531789988136,
+                43.3349994526708
+              ],
+              "type": "Point"
+            },
+            "count": "80"
+          },
+          {
+            "item": {
+              "coordinates": [
+                -84.2166430665433,
+                31.5334783335968
+              ],
+              "type": "Point"
+            },
+            "count": "80"
+          },
+          {
+            "item": {
+              "coordinates": [
+                -91.8963111239611,
+                44.9466540227818
+              ],
+              "type": "Point"
+            },
+            "count": "80"
+          },
+          {
+            "item": {
+              "coordinates": [
+                -79.5686701019357,
+                38.3623935694073
+              ],
+              "type": "Point"
+            },
+            "count": "80"
+          },
+          {
+            "item": {
+              "coordinates": [
+                -78.4079704512629,
+                36.3651057008362
+              ],
+              "type": "Point"
+            },
+            "count": "80"
+          },
+          {
+            "item": {
+              "coordinates": [
+                -90.7412554728013,
+                41.2053038911071
+              ],
+              "type": "Point"
+            },
+            "count": "80"
+          },
+          {
+            "item": {
+              "coordinates": [
+                -83.0242544082613,
+                39.6418488739589
+              ],
+              "type": "Point"
+            },
+            "count": "80"
+          },
+          {
+            "item": {
+              "coordinates": [
+                -96.0140421153943,
+                39.7834139462857
+              ],
+              "type": "Point"
+            },
+            "count": "80"
+          },
+          {
+            "item": {
+              "coordinates": [
+                -94.0706604090783,
+                46.4825194054653
+              ],
+              "type": "Point"
+            },
+            "count": "80"
+          },
+          {
+            "item": {
+              "coordinates": [
+                -111.576241103098,
+                39.3739330940003
+              ],
+              "type": "Point"
+            },
+            "count": "80"
+          },
+          {
+            "item": {
+              "coordinates": [
+                -86.9814538074536,
+                34.8102607960627
+              ],
+              "type": "Point"
+            },
+            "count": "80"
+          }
+        ],
+        "count": "229298",
+        "cardinality": "229298"
+      },
+      "format": {}
+    },
+    {
+      "id": 598687622,
+      "name": "States",
+      "dataTypeName": "number",
+      "description": "This column was automatically created in order to record in what polygon from the dataset 'States' (hjsp-umg2) the point in column 'geolocation' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+      "fieldName": ":@computed_region_hjsp_umg2",
+      "position": 25,
+      "renderTypeName": "number",
+      "tableColumnId": 152045340,
+      "computationStrategy": {
+        "source_columns": [
+          "geolocation"
+        ],
+        "type": "georegion_match_on_point",
+        "parameters": {
+          "region": "_hjsp-umg2",
+          "primary_key": "_feature_id"
+        }
+      },
+      "format": {}
+    },
+    {
+      "id": 598687621,
+      "name": "Counties",
+      "dataTypeName": "number",
+      "description": "This column was automatically created in order to record in what polygon from the dataset 'Counties' (skr5-azej) the point in column 'geolocation' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+      "fieldName": ":@computed_region_skr5_azej",
+      "position": 26,
+      "renderTypeName": "number",
+      "tableColumnId": 147405615,
+      "computationStrategy": {
+        "source_columns": [
+          "geolocation"
+        ],
+        "type": "georegion_match_on_point",
+        "parameters": {
+          "region": "_skr5-azej",
+          "primary_key": "_feature_id"
+        }
+      },
+      "format": {}
+    }
+  ],
+  "grants": [
+    {
+      "inherited": false,
+      "type": "viewer",
+      "flags": [
+        "public"
+      ]
+    }
+  ],
+  "license": {
+    "name": "Public Domain"
+  },
+  "metadata": {
+    "custom_fields": {
+      "Common Core": {
+        "Contact Email": "places@cdc.gov",
+        "Homepage": "http://www.cdc.gov/nccdphp/dph/",
+        "Described By": "https://chronicdata.cdc.gov/dataset/PLACES-Local-Data-for-Better-Health-County-Data-20/swc5-untb",
+        "References": "https://www.cdc.gov/places/measure-definitions/index.html",
+        "Contact Name": "PLACES Public Inquiries",
+        "Issued": "7/27/2023",
+        "Program Code": "009:020",
+        "Publisher": "Centers for Disease Control and Prevention",
+        "Bureau Code": "009:20",
+        "Public Access Level": "public"
+      },
+      "Common Core 3": {
+        "Contact Email": "places@cdc.gov",
+        "Described By": "https://chronicdata.cdc.gov/dataset/PLACES-Local-Data-for-Better-Health-County-Data-20/swc5-untb",
+        "Contact Name": "PLACES Public Inquiries",
+        "Program Code": "009:020",
+        "Restriction Status": "public",
+        "Publisher": "Centers for Disease Control and Prevention",
+        "Bureau Code": "009:20",
+        "Public Access Level": "public"
+      },
+      "Dataset Information": {
+        "Glossary/Methodology ": "http://www.cdc.gov/places/"
+      }
+    },
+    "availableDisplayTypes": [
+      "table",
+      "fatrow",
+      "page"
+    ]
+  },
+  "owner": {
+    "id": "fjjr-gap9",
+    "displayName": "CDC UserSA",
+    "screenName": "CDC UserSA",
+    "type": "interactive",
+    "flags": [
+      "acceptedEula",
+      "mayBeStoriesCoOwner"
+    ]
+  },
+  "query": {},
+  "rights": [
+    "read"
+  ],
+  "tableAuthor": {
+    "id": "fjjr-gap9",
+    "displayName": "CDC UserSA",
+    "screenName": "CDC UserSA",
+    "type": "interactive",
+    "flags": [
+      "acceptedEula",
+      "mayBeStoriesCoOwner"
+    ]
+  },
+  "tags": [
+    "places",
+    "county",
+    "brfss",
+    "prevalence",
+    "risk",
+    "behaviors",
+    "outcomes",
+    "prevention",
+    "health",
+    "status",
+    "disability",
+    "social needs"
+  ],
+  "flags": [
+    "default",
+    "ownerMayBeContacted",
+    "restorable",
+    "restorePossibleForType"
+  ]
+}
